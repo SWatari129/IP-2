@@ -18,14 +18,14 @@ A class project that designed a multiple choice quiz that suggest a programing l
 
 ## Setup/Installation Requirements
 
-* [Click here](https://swatari129.github.io/IP-2/) to view the project.
+* [Click here](https://swatari129.github.io/IP-2/IP-2.html) to view the project.
 * [Click here](https://github.com/SWatari129/IP-2) to clone from github.
 
 
 
 ## Known Bugs
 
-* //Having issues with the pictures of portland in the background. I’m working on having the image scroll with the page. For now, it’s staying up top.//
+* Having problems getting the different language results to show up in the alert function.
 
 ## License
 
