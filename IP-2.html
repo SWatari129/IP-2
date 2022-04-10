@@ -87,7 +87,7 @@
           </div>
       </div>
       
-        <button type="submit" id="submit" onclick="getResults()">Submit Your Answers</button>
+        <button type="submit" id="submit" onclick="getResults();">Submit Your Answers</button>
       <button type="reset" id="reset" onclick="resetAnswer()">Reset</button>
       </form>
       
@@ -97,6 +97,9 @@
 
     <script>
         $(document).ready(function(){
+          $('form').submit(function(e){
+            e.preventDefault();
+          });
          // $('#q1').hide();
          // $('#q2').hide();
          // $('#q3').hide();
@@ -107,6 +110,7 @@
               $('#survey').show();
           });
         });
+      
     </script>
 
 </body>

@@ -1,3 +1,5 @@
+
+
 function getResults(){
   let choice1=0;
   let choice2=0;
