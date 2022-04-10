@@ -13,87 +13,104 @@
 </head>
 
 <body>
-  <h2>Programing Language Quiz!</h2>
-
-  <div class="container">
-    <div id="question-container" class="hide">
-      <div id="answer-buttons" class="btn-grid">
-          <button id="awswer1" class="btn">Awswer 1</button>
-          <section>
-            <article id="article1">
-              <h2>Q1. What are the different data types present in javascript?</h2>
-            </article>
-            <article id="article2">
-              <h2>Q2. Difference between “ == “ and “ === “ operators.</h2>
-            </article>
-            <article id="article3">
-              <h2>Q3. Is javascript a statically typed or a dynamically typed language?</h2>
-            </article>
-          </section>
-          <button id="awswer2" class="btn">Awswer 2</button>
-          <section>
-            <article id="article1">
-              <h2>Q1. What are the different data types present in javascript?</h2>
-            </article>
-            <article id="article2">
-              <h2>Q2. Difference between “ == “ and “ === “ operators.</h2>
-            </article>
-            <article id="article3">
-              <h2>Q3. Is javascript a statically typed or a dynamically typed language?</h2>
-            </article>
-          </section>
-          <button id="awswer3" class="btn">Awswer 3</button>
-          <section>
-            <article id="article1">
-              <h2>Q1. What are the different data types present in javascript?</h2>
-            </article>
-            <article id="article2">
-              <h2>Q2. Difference between “ == “ and “ === “ operators.</h2>
-            </article>
-            <article id="article3">
-              <h2>Q3. Is javascript a statically typed or a dynamically typed language?</h2>
-            </article>
-          </section>
+  <div id="wrapper">
+      <h1>What kind of computer scientist are you?</h1>
+      <p>Take this questionnaire to find out!</p>
+      <button id="start-btn" name="start-btn">Start Survey</button>
+      <form id="quiz">
+        <!-- Question 1 -->
+        <div id="survey">
+         <div id="q1">
+          <h2>What is your favorite color?</h2>
+          <!-- Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1. -->
+          <!-- The value is which answer the choice corresponds to. -->
+          <label><input type="radio" name="q1" value="c1">
+            Red
+          </label><br />
+          <label><input type="radio" name="q1" value="c2">
+            Yellow
+          </label><br />
+          <label><input type="radio" name="q1" value="c3">
+            Blue
+          </label><br />
+         </div>
+         <div id="q2">
+                       <!-- Question 2 -->
+        <h2>Would you rather work …?</h2>
+        <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
+        <label><input type="radio" name="q2" value="c1">
+          Frontend 
+        </label><br />
+        <label><input type="radio" name="q2" value="c2">
+          Fullstack
+        </label><br />
+        <label><input type="radio" name="q2" value="c3">
+          Backend
+        </label><br />
+         </div>
+         <div id="q3">
+              <!-- Question 3 -->
+        <h2>What is most important?</h2>
+        <!-- Choices for the third question -->
+        <label><input type="radio" name="q3" value="c1">
+          Design
+        </label><br />
+        <label><input type="radio" name="q3" value="c2">
+          Performance
+        </label><br />
+        <label><input type="radio" name="q3" value="c3">
+          Functionality
+        </label><br />
+          </div>
+          <div id="q4">
+              <!-- Question 4 -->
+        <h2>What do you prefer?</h2>
+        <!-- Choices for the fourth question -->
+        <label><input type="radio" name="q4" value="c1">
+          Creating
+        </label><br />
+        <label><input type="radio" name="q4" value="c2">
+          Creating and Refraining
+        </label><br />
+        <label><input type="radio" name="q4" value="c3">
+          Refraining
+        </label><br />
+          </div><!-- Question 5 -->
+        <h2>Where do you take your first bit on a banana?
+        </h2>
+        <!-- Choices for the Fifth question -->
+        <label><input type="radio" name="q4" value="c1">
+          Top
+        </label><br />
+        <label><input type="radio" name="q4" value="c2">
+          Bottom
+        </label><br />
+        <label><input type="radio" name="q4" value="c3">
+          The side
+        </label><br />
+          </div>
       </div>
+        <button type="submit" id="submit" onclick="tabulateAnswers()">Submit Your Answers</button>
+      <button type="reset" id="reset" onclick="resetAnswer()">Reset</button>
+      </form>
+      
+      
+      <div id="answer">Your result will show up here!</div>
     </div>
-    <div class="controls">
-      <button id="start-btn" class="start-btn btn">Start</button>
-      <button id="next-btn" class="next-btn btn hide">Next</button>
-    </div>
-  </div>
-    <div class="score">
-<Span id="right-answers"></Span>
 
-<section>
-  <ul class="list-group">
-    <li class="list-group-item">
-      <input type="radio" id="ruby" name="test" value="value1">
-        First checkbox
-    </li>
-    <li class="list-group-item">
-      <input type="radio" id="javascript" name="test" value="value2">
-        Second checkbox
-    </li>
-    <li class="list-group-item">
-      <input type="radio" id="c#" name="test" value="value3">
-        Third checkbox
-    </li>
-  </ul>
-</section>
-<section>
-  <a class="btn btn-primary" href="#" role="button">Next</a>
-  <button class="btn btn-primary" type="start over">Refresh</button>
-  <input class="btn btn-primary" type="submit" value="Submit">
-</section>
+    <script>
+        $(document).ready(function(){
+         // $('#q1').hide();
+         // $('#q2').hide();
+         // $('#q3').hide();
+         // $('#q4').hide();
+         $('#survey').hide();
 
-<script>
-  $(Document).ready(function(){
-    $('.btn').click(function(){
-      $('section').hide();
-    });
-      });
-</script>
+          $('#start-btn').click(function(){
+              $('#survey').show();
+          });
+        });
+    </script>
 
 </body>
-
 </html>
