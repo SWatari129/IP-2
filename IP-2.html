@@ -33,83 +33,80 @@
           </label><br />
          </div>
 
-         <div id="q2">
-        <h2>Would you rather work …?</h2>
-        <label><input type="radio" name="q2" value="c1">
-          Frontend 
-        </label><br />
-        <label><input type="radio" name="q2" value="c2">
-          Fullstack
-        </label><br />
-        <label><input type="radio" name="q2" value="c3">
-          Backend
-        </label><br />
-         </div>
+        <div id="q2">
+          <h2>Would you rather work …?</h2>
+          <label><input type="radio" name="q2" value="c1">
+            Frontend 
+          </label><br />
+          <label><input type="radio" name="q2" value="c2">
+            Fullstack
+          </label><br />
+          <label><input type="radio" name="q2" value="c3">
+            Backend
+          </label><br />
+        </div>
 
          <div id="q3">
-        <h2>What is most important?</h2>
-        <label><input type="radio" name="q3" value="c1">
-          Design
-        </label><br />
-        <label><input type="radio" name="q3" value="c2">
-          Performance
-        </label><br />
-        <label><input type="radio" name="q3" value="c3">
-          Functionality
-        </label><br />
-          </div>
+          <h2>What is most important?</h2>
+          <label><input type="radio" name="q3" value="c1">
+            Design
+          </label><br />
+          <label><input type="radio" name="q3" value="c2">
+            Performance
+          </label><br />
+          <label><input type="radio" name="q3" value="c3">
+            Functionality
+          </label><br />
+        </div>
 
-          <div id="q4">
-        <h2>What do you prefer?</h2>
-        <label><input type="radio" name="q4" value="c1">
-          Creating
-        </label><br />
-        <label><input type="radio" name="q4" value="c2">
-          Creating and Refraining
-        </label><br />
-        <label><input type="radio" name="q4" value="c3">
-          Refraining
-        </label><br />
-          </div>
+        <div id="q4">
+          <h2>What do you prefer?</h2>
+          <label><input type="radio" name="q4" value="c1">
+            Creating
+          </label><br />
+          <label><input type="radio" name="q4" value="c2">
+            Creating and Refraining
+          </label><br />
+          <label><input type="radio" name="q4" value="c3">
+            Refraining
+          </label><br />
+        </div>
 
-          <div id="q5">
-        <h2>Where do you take your first bite on a banana?</h2>
-        <label><input type="radio" name="q5" value="c1">
-          Top
-        </label><br />
-        <label><input type="radio" name="q5" value="c2">
-          Bottom
-        </label><br />
-        <label><input type="radio" name="q5" value="c3">
-          The side
-        </label><br />
-          </div>
-      </div>
+        <div id="q5">
+          <h2>Where do you take your first bite on a banana?</h2>
+          <label><input type="radio" name="q5" value="c1">
+            Top
+          </label><br />
+          <label><input type="radio" name="q5" value="c2">
+            Bottom
+          </label><br />
+          <label><input type="radio" name="q5" value="c3">
+            The side
+          </label><br />
+        </div>
+    </div>
+
+    <button type="submit" id="submit" onclick="getResults();">Submit Your Answers</button>
+    <button type="reset" id="reset" onclick="resetForm();">Reset</button>
       
-        <button type="submit" id="submit" onclick="getResults();">Submit Your Answers</button>
-      <button type="reset" id="reset" onclick="resetForm();">Reset</button>
-      </form>
-      
-      
+    </form>
       <div id="answer">Get your result here!</div>
     </div>
 
     <script>
-        $(document).ready(function(){
-          $('form').submit(function(e){
-            e.preventDefault();
-          });
-         // $('#q1').hide();
-         // $('#q2').hide();
-         // $('#q3').hide();
-         // $('#q4').hide();
-         $('#survey').hide();
+      $(document).ready(function(){
+        $('form').submit(function(e){
+          e.preventDefault();
+        });
+        $('#survey').hide();
 
           $('#start-btn').click(function(){
-              $('#survey').show();
+            $('#survey').show();
+          });
+          $('#submit').click(function(){
+            $('#survey').hide();
           });
         });
-      
     </script>
 
 </body>
