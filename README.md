@@ -20,6 +20,9 @@ A class project that designed a multiple choice quiz that suggest a programing l
 
 * [Click here](https://swatari129.github.io/IP-2/IP-2.html) to view the project.
 * [Click here](https://github.com/SWatari129/IP-2) to clone from github.
+* To view the project clone from GitHub from the link above. 
+* Run the HTML file in the Chrome browser. 
+* Answer the five-question to find out what programing language is right for you.
 
 
 

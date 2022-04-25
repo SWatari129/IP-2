@@ -27,12 +27,14 @@ function getResults(){
     surveyResponse="Ruby";
   }
   if(choice2==totalScore) {
-    surveyResponse="Javescript";
+    surveyResponse="JavaScript";
   }
   if(choice3==totalScore) {
     surveyResponse="C#";
+  
   }
-  show.responce("Your Programing Language is " + surveyResponse);
+  document.getElementById('output').innerHTML = "Your Programing Language is " + surveyResponse;
+  //alert("Your Programing Language is " + surveyResponse);
 }
 function resetForm() {
   location.reload;
