@@ -32,7 +32,7 @@ function getResults(){
   if(choice3==totalScore) {
     surveyResponse="C#";
   }
-  alert("Your Programing Language is " + surveyResponse);
+  show.responce("Your Programing Language is " + surveyResponse);
 }
 function resetForm() {
   location.reload;
